@@ -11,30 +11,11 @@
                 <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
                     <div class="text-center">
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Dresses <i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item text-white">Men's Dresses</a>
-                                <a href="" class="dropdown-item text-white">Women's Dresses</a>
-                                <a href="" class="dropdown-item text-white">Baby's Dresses</a>
-                            </div>
-                        </div>
                         <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link" data-toggle="dropdown">Computures <i class="fa fa-angle-down float-right mt-1"></i></a>
-                                <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                    <a href="" class="dropdown-item text-white">Laptop</a>
-                                    <a href="" class="dropdown-item text-white">Desktop</a>
-                                </div>
-                            </div>
-                            <a href="" class="nav-item nav-link">Shirts</a>
-                            <a href="" class="nav-item nav-link">Jeans</a>
-                            <a href="" class="nav-item nav-link">Swimwear</a>
-                            <a href="" class="nav-item nav-link">Sleepwear</a>
-                            <a href="" class="nav-item nav-link">Sportswear</a>
-                            <a href="" class="nav-item nav-link">Jumpsuits</a>
-                            <a href="" class="nav-item nav-link">Blazers</a>
-                            <a href="" class="nav-item nav-link">Jackets</a>
-                            <a href="" class="nav-item nav-link">Shoes</a>
+                            <a href="dresses.php" class="nav-item nav-link">Dresses</a>
+                            <a href="computer.php" class="nav-item nav-link">Computures</a>
+                            <a href="shoes.php" class="nav-item nav-link">Shoes</a>
+                            <a href="furniture.php" class="nav-item nav-link">Furniture</a>
                         </div>
                     </div>
                 </div>
@@ -122,7 +103,24 @@
 <!-- Featured End -->
 
 <!-- Categories Start -->
-<?php require_once('assets/tamplates/viewProduct.php'); ?>
+    <h4>Your Product In The market</h4>    
+    <div class="row animated--grow-in">
+        <div class="col-xl-12">
+            <div class="row main-section my-2">
+                <?php
+                    $productRecord = $conn->query("SELECT * FROM product, productcategory where product.productCategory = productcategory.pCategoryId ");
+                    $ProdcutResult = mysqli_num_rows($productRecord);
+                    if($ProdcutResult > 0):
+                        while($ProdcutResult > 0):
+                            $ProdcutResult--;
+                            $product = mysqli_fetch_assoc($productRecord);
+                                include('assets/tamplates/viewProduct.php'); 
+                        endwhile;
+                    endif;
+                ?>
+            </div>
+        </div>
+    </div>
 <!-- Categories End -->
 
 <?php require_once('include/footer.php'); ?>

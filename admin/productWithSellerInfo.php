@@ -20,7 +20,7 @@
             <p>location: <span class="float-right"><?php echo $sellerResult['location']; ?></span></p>
         </div>
     </div>
-    <h4>Related Product In Your Stock</h4>      
+    <h4>Related Product In The Stock</h4>      
     <div class="row animated--grow-in">
         <div class="col-xl-12">
             <div class="row main-section">
@@ -31,27 +31,29 @@
                         while($ProdcutResult > 0):
                             $ProdcutResult--;
                             $product = mysqli_fetch_assoc($productRecord); ?>
-                                <div class="card" style="width: 20rem; height: 300px;">
-                                    <div class="card-header">
-                                        <p><?php echo $product['productName']; ?></p>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="productWithSellerInfo.php?productInfo=<?php echo $product['productId']; ?>">
-                                            <img src="../upload/<?php echo $product['productImage']; ?>" class="thumbnail" alt="product img" style="width: 100%; height: 145px;">
-                                        </a>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="badge badge-primary">
-                                                    <?php echo $product['status']; ?>
+                                <div class="col-md-4 col-sm-6 my-2">
+                                    <div class="card" style="width: 20rem; height: 300px;">
+                                        <div class="card-header">
+                                            <p><?php echo $product['productName']; ?></p>
+                                        </div>
+                                        <div class="card-body">
+                                            <a href="productWithSellerInfo.php?productInfo=<?php echo $product['productId']; ?>">
+                                                <img src="../upload/<?php echo $product['productImage']; ?>" class="thumbnail" alt="product img" style="width: 100%; height: 145px;">
+                                            </a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="badge badge-primary">
+                                                        <?php echo $product['status']; ?>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <form action="registerSellerAction.php" method="post">
-                                                    <input type="number" name="product" hidden value="<?php echo $product['productId']; ?>" required>
-                                                    <button type="submit" name="deleteProduct" class="text-white btn btn-danger float-right">Delete</button>
-                                                </form>
+                                                <div class="col-md-4">
+                                                    <form action="registerSellerAction.php" method="post">
+                                                        <input type="number" name="product" hidden value="<?php echo $product['productId']; ?>" required>
+                                                        <button type="submit" name="deleteProduct" class="text-white btn btn-danger float-right">Delete</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
