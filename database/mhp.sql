@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2023 at 12:26 AM
+-- Generation Time: May 26, 2023 at 05:53 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -63,7 +63,12 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`productId`, `productName`, `soldBy`, `status`, `productCategory`, `productImage`) VALUES
 (1, 't-shirt', 1, 'on stock', 1, 'a137a885bc6bfa50ba496e9203606d79.jpg'),
-(3, 'Mac laptop', 1, 'on stock', 2, 'best laptops1679305053832.jpg');
+(3, 'Mac laptop', 1, 'on stock', 2, 'best laptops1679305053832.jpg'),
+(4, 'shoes', 1, 'on stock', 3, '7pyu4_512.jpg'),
+(5, 'shoes', 1, 'on stock', 3, 'images.jpg'),
+(6, 'shoes', 1, 'on stock', 3, '13364970_15364214_1000.jpg'),
+(7, 'furniture', 1, 'on stock', 4, 'furniture.jpg'),
+(8, 'furniture', 1, 'on stock', 4, '61tV07vXkIL.jpg');
 
 -- --------------------------------------------------------
 
@@ -84,7 +89,9 @@ CREATE TABLE `productcategory` (
 
 INSERT INTO `productcategory` (`pCategoryId`, `categoryName`, `dateAdded`, `addedBy`) VALUES
 (1, 'Clothes', '2023-05-25', 1),
-(2, 'cumputer', '2023-05-25', 1);
+(2, 'cumputer', '2023-05-25', 1),
+(3, 'shoes', '2023-05-26', 1),
+(4, 'furniture', '2023-05-26', 1);
 
 -- --------------------------------------------------------
 
@@ -152,13 +159,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `productcategory`
 --
 ALTER TABLE `productcategory`
-  MODIFY `pCategoryId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `pCategoryId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `seller`
