@@ -1,4 +1,4 @@
-<?php require_once('../admin/include/navbar.php'); ?>
+<?php require_once('../admin/include/dashboard.php'); ?>
 <div class="container col-md-6">
     <h4>Personal information</h4>
     <form action="updateProfileAction.php" method="post" class=" col-push-3">
@@ -28,4 +28,7 @@
             <button type="submit" name="update" class="btn btn-secondary">update information</button>
         </div>
     </form>
+</div>
+<div class="" hidden>
+    <?php require_once('../include/footer.php'); ?>
 </div>

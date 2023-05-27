@@ -1,12 +1,23 @@
-<?php require_once('include/navbar.php'); ?>
+<?php require_once('include/dashboard.php'); ?>
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <?php
                 $productRecord = $conn->query("SELECT * FROM product, productcategory where product.productCategory = productcategory.pCategoryId  and productId = {$_GET['productInfo']} ");
                 $productResult = mysqli_fetch_assoc($productRecord); ?>
                     <img src="upload/<?php echo $productResult['productImage']; ?>" class="thumbnail" alt="product img" style="width: 100%; height: 500px;">
-                    <p><?php echo $productResult['productName']; ?></p>
+                    <div class="conainter">
+                        <div class="alert alert-success">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Product Name <span class="badge badge-primary"><?php echo  $productResult['productName']; ?></span>
+                                </div>
+                                <div class="col-md-6">
+                                    Product Price <span class="badge badge-primary"><?php echo  $productResult['productPrice']; ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </div>
         <div class="col-md-4 bg-light">
             <h4 class="text-center">Seller information</h4>
@@ -43,4 +54,7 @@
             </div>
         </div>
     </div>
+</div>
+<div class="">
+    <?php require_once('include/footer.php'); ?>
 </div>

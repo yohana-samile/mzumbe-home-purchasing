@@ -1,4 +1,4 @@
-<?php require_once('include/navbar.php'); ?>
+<?php require_once('include/dashboard.php'); ?>
 <?php require_once('include/messages.php'); ?>
 <div class="container col-5 d-flex justify-content-center bg-light">
     <form action="loginAction.php" method="post" class=" col-push-3">
@@ -16,4 +16,7 @@
         </div>
         <p>Do not have account register <a href="registerSeller.php">Here</a></p>
     </form>
+</div>
+<div class="">
+    <?php require_once('include/footer.php'); ?>
 </div>

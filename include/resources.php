@@ -20,17 +20,19 @@
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+        <!-- supportive libraly -->        
+        <script src="https://code.jquery.com/jquery-3.7.0.slim.min"></script>    
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.slim.min"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
         <!-- Libraries Stylesheet -->
         <link href="../assets/css/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/styleNav.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
-
-
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min"></script>    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <link href="assets/css/styleNav.css" rel="stylesheet">
     </head>
 <body>

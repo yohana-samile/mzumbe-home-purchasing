@@ -1,7 +1,7 @@
-<?php require_once('../admin/include/navbar.php'); ?>
+<?php require_once('../admin/include/dashboard.php'); ?>
 <h3 class="text-center text-capitalize">Your Product Table</h3>
 <?php if(isset($_GET['key'])): endif; ?>
-<div class=" col-md-12 my-4 d-flex justify-content-center">
+<div class=" col-md-12 my-4">
     <div class="row animated--grow-in">
         <div class="col-md-12">
             <div class="card card-body">
@@ -18,25 +18,29 @@
                             <th>S/N</th>
                             <th>product Name</th>
                             <th>Product Image</th>
-                            <th>Sold By Ypu</th>
+                            <th>Product Price</th>
+                            <th>Sold By You</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
+                            $sn = 1;
                             $new_seller_record = $conn->query("SELECT * FROM product where soldBy = {$_SESSION['sellerData']['sellerId']} ");
                             $ProdcutResult = mysqli_num_rows($new_seller_record);
                             while($ProdcutResult = mysqli_fetch_array($new_seller_record)):
                                 if($ProdcutResult > 0): ?>
                                     <tr>
+                                        <td><?php echo $sn++; ?> </td>
                                         <td><?php echo $ProdcutResult['productName'] ?> </td>
                                         <td><a href="" data-target="#viewProduct<?php echo $ProdcutResult['productId']; ?>" data-toggle="modal"><i class="fa fa-eye text-center"></i></a></td>
+                                        <td><?php echo $ProdcutResult['productPrice'] ?> </td>
                                         <td><i class="fa fa-check text-center"></i> </td>
                                         <td><?php echo $ProdcutResult['status']; ?> </td>
                                         <td>
                                             <a href="" data-target="#updateProductInfo<?php echo $ProdcutResult['productId']; ?>" data-toggle="modal"><i class="fa fa-edit text-warning"></i></a>
-                                            <a href="" data-target="#deleteProduct<?php echo $ProdcutResult['productId']; ?>" data-toggle="modal"><small>delete </small><i class="fa fa-trash-o text-danger"></i></a>
+                                            <a href="" data-target="#deleteProduct<?php echo $ProdcutResult['productId']; ?>" data-toggle="modal"><small class="text-danger">delete </small><i class="fa fa-trash-o text-danger"></i></a>
                                         </td>
                                 <?php endif; ?>
                                 <!-- product image -->
@@ -74,6 +78,9 @@
                                                         <input type="text" class="form-control" name="productName" value="<?php echo $ProdcutResult['productName']; ?>" placeholder="product Name" required>
                                                     </div>
                                                     <div class="my-3 form-group">
+                                                        <input type="text" class="form-control" name="productPrice" value="<?php echo $ProdcutResult['productPrice']; ?>" placeholder="product Price" required>
+                                                    </div>
+                                                    <div class="my-3 form-group">
                                                         <input type="text" class="form-control" name="status" value="<?php echo $ProdcutResult['status']; ?>" placeholder="category status" required>
                                                     </div>
                                                     <div class="my-3 text-center form-group">
@@ -92,4 +99,7 @@
         </div>
     </div>
 </div>
-<?php require_once('../admin/include/modal.php'); ?>
+<?php require_once('modal.php'); ?>
+<div class="" hidden>
+    <?php require_once('../include/footer.php'); ?>
+</div>

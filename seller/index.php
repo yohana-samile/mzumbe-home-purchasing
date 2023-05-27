@@ -1,6 +1,6 @@
-<?php require_once('../admin/include/navbar.php'); ?>
+<?php require_once('../admin/include/dashboard.php'); ?>
 <div class="container">
-    <h4>Your Product In The market</h4>    
+    <h4 class="text-center">Your Product In The market</h4>    
     <div class="row animated--grow-in">
         <div class="col-xl-12">
             <div class="row main-section">
@@ -45,4 +45,7 @@
             </div>
         </div>
     </div>
+</div>
+<div class="" hidden>
+    <?php require_once('../include/footer.php'); ?>
 </div>

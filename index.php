@@ -1,31 +1,9 @@
-<?php require_once('include/navbar.php'); ?>
+<?php require_once('include/dashboard.php'); ?>
 <!-- Navbar Start -->
-<div class="container-fluid mb-5">
-    <div class="row border-top px-xl-5">
-        <div class="col-lg-3 d-none d-lg-block">
-            <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                <h6 class="m-0">Categories</h6>
-                <i class="fa fa-angle-down text-dark"></i>
-            </a>
-            <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
-                <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                    <div class="text-center">
-                        <div class="nav-item dropdown">
-                        <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                            <a href="dresses.php" class="nav-item nav-link">Dresses</a>
-                            <a href="computer.php" class="nav-item nav-link">Computures</a>
-                            <a href="shoes.php" class="nav-item nav-link">Shoes</a>
-                            <a href="furniture.php" class="nav-item nav-link">Furniture</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="col-lg-9">
             <div id="header-carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="height: 410px;">
-                        <img class="img-fluid" src="images/best laptops1679305053832.jpg" alt="">
+                        <img class="img-fluid" src="images/best laptops1679305053832.jpg" alt="" style="width: 100%;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
@@ -35,7 +13,7 @@
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 410px;">
-                        <img class="img-fluid" src="images/Mystic-113_1.jpg" alt="">
+                        <img class="img-fluid" src="images/Mystic-113_1.jpg" alt="" style="width: 100%;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
@@ -45,7 +23,7 @@
                         </div>
                     </div>
                     <div class="carousel-item" style="height: 410px;">
-                        <img class="img-fluid" src="images/a137a885bc6bfa50ba496e9203606d79.jpg" alt="">
+                        <img class="img-fluid" src="images/a137a885bc6bfa50ba496e9203606d79.jpg" alt="" style="width: 100%;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
@@ -66,9 +44,6 @@
                     </div>
                 </a>
             </div>
-        </div>
-    </div>
-</div>
 <!-- Navbar End -->
 
 <!-- Featured Start -->
@@ -103,7 +78,7 @@
 <!-- Featured End -->
 
 <!-- Categories Start -->
-    <h4>Your Product In The market</h4>    
+    <h4 class="text-center">Your Product In The market</h4>    
     <div class="row animated--grow-in">
         <div class="col-xl-12">
             <div class="row main-section my-2">

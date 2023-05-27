@@ -1,8 +1,10 @@
-<?php require_once('include/navbar.php'); ?>
-
+<?php 
+    require_once('include/dashboard.php'); 
+    require_once('include/navbar.php'); 
+?>
 <h3 class="text-center text-capitalize">This is list of registered Seller</h3>
 <?php if(isset($_GET['key'])): endif; ?>
-<div class=" col-md-12 my-4 d-flex justify-content-center">
+<div class=" col-md-12 my-4">
     <div class="row animated--grow-in">
         <div class="col-md-12">
             <div class="card card-body">
@@ -52,3 +54,6 @@
     </div>
 </div>
 <?php require_once('include/modal.php'); ?>
+<div class="" hidden>
+    <?php require_once('../include/footer.php'); ?>
+</div>

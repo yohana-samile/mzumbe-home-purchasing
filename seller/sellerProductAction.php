@@ -8,6 +8,7 @@
         $soldBy = $_POST['soldBy'];
         $status = $_POST['status'];
         $productCategory = $_POST['productCategory'];
+        $productPrice = $_POST['productPrice'];
         $filename = $_FILES['productImage']['name'];
 
         // destination of the file on the server
@@ -31,7 +32,7 @@
         else: 
             // move the uploaded (temporary) file to the specified destination
             if (move_uploaded_file($file, $destination)):
-                $sellProduct = $conn->query("INSERT INTO product VALUES (null, '$productName', '$soldBy', '$status', '$productCategory', '$filename') ");
+                $sellProduct = $conn->query("INSERT INTO product VALUES (null, '$productName', '$soldBy', '$status', '$productCategory', '$productPrice', '$filename') ");
                 if($sellProduct):
                     $_SESSION['success'] = "Product Advertised";
                     header('location:product.php?key=success');
@@ -46,9 +47,10 @@
     elseif(isset($_POST['updateProductInfo'])):
         $productId  = $_POST['productId '];
         $productName = $_POST['productName'];
+        $productPrice = $_POST['productPrice'];
         $status = $_POST['status'];
 
-        $updateProduct = $conn->query("UPDATE product SET productName = '$productName', status = '$status' WHERE productId  = '$productId ' ");
+        $updateProduct = $conn->query("UPDATE product SET productName = '$productName', productPrice = '$productPrice', status = '$status' WHERE productId  = '$productId ' ");
         if($updateCategory):
             $_SESSION['success'] = "product Updated";
             header('location:product.php?key=success');

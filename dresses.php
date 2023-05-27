@@ -1,6 +1,7 @@
-<?php require_once('include/navbar.php'); ?>
+<?php require_once('include/dashboard.php'); ?>
 <!-- Dress Categories Start -->
-<h4 class="text-center">Buy dress of your choice with resonable price from our different seller</h4>    
+<div class="container">
+    <h4 class="text-center">Buy dress of your choice with resonable price from our different seller</h4>    
     <div class="row animated--grow-in">
         <div class="col-xl-12">
             <div class="row main-section my-2">
@@ -18,4 +19,8 @@
             </div>
         </div>
     </div>
+</div>
 <!-- Dress Categories End -->
+<div class="">
+    <?php require_once('include/footer.php'); ?>
+</div>

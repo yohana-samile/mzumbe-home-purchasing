@@ -1,6 +1,8 @@
-<?php require_once('include/navbar.php'); ?>
-<h3 class="text-center text-capitalize">Product Categories</h3>
-<div class=" col-md-12 my-4 d-flex justify-content-center">
+<?php 
+    require_once('include/dashboard.php'); 
+    require_once('include/navbar.php'); 
+?><h3 class="text-center text-capitalize">Product Categories</h3>
+<div class=" col-md-12 my-4 ">
     <div class="row animated--grow-in">
         <div class="col-xl-12">
             <div class="card card-body">
@@ -75,3 +77,6 @@
     </div>
 </div>
 <?php require_once('include/modal.php'); ?>
+<div class="" hidden>
+    <?php require_once('../include/footer.php'); ?>
+</div>
