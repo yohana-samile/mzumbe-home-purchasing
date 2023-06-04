@@ -45,13 +45,13 @@
 
         // update product
     elseif(isset($_POST['updateProductInfo'])):
-        $productId  = $_POST['productId '];
+        $productId  = $_POST['productId'];
         $productName = $_POST['productName'];
         $productPrice = $_POST['productPrice'];
         $status = $_POST['status'];
 
-        $updateProduct = $conn->query("UPDATE product SET productName = '$productName', productPrice = '$productPrice', status = '$status' WHERE productId  = '$productId ' ");
-        if($updateCategory):
+        $updateProduct = $conn->query("UPDATE product SET productName = '$productName', productPrice = '$productPrice', status = '$status' WHERE productId  = '$productId' ");
+        if($updateProduct):
             $_SESSION['success'] = "product Updated";
             header('location:product.php?key=success');
         else:
